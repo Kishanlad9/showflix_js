@@ -129,3 +129,15 @@ function checkDataExists(dbName, value) {
   });
   console.log(findRecord);
 }
+
+function generateDropdownByValue(values, fieldRef, fieldFor = "") {
+  let records = values;
+  fieldRef.innerHTML = "";
+  let option = `<option disabled>Select ${fieldFor}</option>`;
+  records.forEach((record) => {
+    option += `
+    <option value="${record.id}">${record.name}</option>
+    `;
+  });
+  fieldRef.innerHTML += option;
+}

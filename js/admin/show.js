@@ -1,8 +1,11 @@
 const showURL = "http://127.0.0.1:5500/json/show.json";
 let shows = getFromLocalStorage("shows");
 let movies = getFromLocalStorage("movies");
+let cinemas = getFromLocalStorage("cinemas");
+let screens = getFromLocalStorage("screens");
 const showForm = document.getElementById("showForm");
 let showList = document.getElementById("show-list");
+let editShowId = null;
 
 let selectCinemaForShow = document.getElementById("cinemaId_show");
 let selectScreenForShow = document.getElementById("screenId_show");
@@ -24,7 +27,6 @@ const fetchShowData = async () => {
 if (!getFromLocalStorage("shows")) {
   fetchShowData() || [];
 }
-let screens = getFromLocalStorage("screens");
 
 generateDropdownSelect(selectCinemaForShow, "cinemas", "Cinema Name");
 generateDropdownSelect(selectMovieForShow, "movies", "Movie");
@@ -63,21 +65,69 @@ selectCinemaForShow.addEventListener("change", () => {
   });
 });
 
-// Display Shows
-function displayShows() {
-  // shows.data.forEach((show) => {});
-  // cinemaName, show time from - to, screenName, Moviename
-  showList.innerHTML = "";
-  showList.innerHTML = `
-    <div class="card">
-    
-    </div>
-  `;
+function deleteShow(showId) {
+  shows.data = shows.data.filter((show) => show.id != showId);
+  saveToLocalStorage("shows", shows);
+  displayShows();
 }
 
-showForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log(screens.data);
+function updateShow(showId) {
+  let findedShow = shows.data.find((show) => show.id == showId);
+  let findedScreen = screens.data.filter(
+    (screen) => screen.cinemaId == findedShow.cinemaId,
+  );
+  let findedMovieLang = movies.data.filter(
+    (movie) => movie.id == findedShow.movieId,
+  );
+
+  generateDropdownByValue(findedScreen, selectScreenForShow, "Screen");
+
+  console.log(findedShow);
+  selectCinemaForShow.value = findedShow.cinemaId;
+  selectMovieForShow.value = findedShow.movieId;
+  selectScreenForShow.value = findedShow.screenId;
+  selectShowFormat.value = findedShow.format;
+  selectShowLanguage.value = findedShow.language;
+  document.getElementById("showDate").value = findedShow.showDate;
+  document.getElementById("showStartTime").value = findedShow.showStartTime;
+  document.getElementById("showEndTime").value = findedShow.showEndTime;
+}
+
+// Display Shows
+function displayShows() {
+  showList.innerHTML = "";
+  shows.data.forEach((show) => {
+    let movie = movies.data.find((movie) => movie.id == show.movieId);
+    let cinema = cinemas.data.find((cinema) => cinema.id == show.cinemaId);
+    let screen = screens.data.find((screen) => screen.id == show.screenId);
+    let newCard = document.createElement("div");
+    newCard.setAttribute("class", "card");
+    newCard.innerHTML += `
+      <div class="card-body">
+        <h5 class="card-title">${movie.name}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">${cinema.name} (${show.showStartTime} - ${show.showEndTime})
+        </h6>
+        <p class="card-text">
+            <b>Date:</b> ${show.showDate}<br>
+            <b>Screen:</b> ${screen.name}
+        </p>
+        <button class="btn btn-sm btn-secondary editShow-btn"        data-bs-toggle="modal"
+          data-bs-target="#showModel">Edit</button>
+        <button class="btn btn-sm btn-danger deleteShow-btn" 
+        >Delete</button>
+      </div>
+  `;
+    newCard
+      .querySelector(".editShow-btn")
+      .addEventListener("click", () => updateShow(show.id));
+    newCard
+      .querySelector(".deleteShow-btn")
+      .addEventListener("click", () => deleteShow(show.id));
+    showList.appendChild(newCard);
+  });
+}
+
+showForm.addEventListener("submit", () => {
   let findSeat = screens.data.find((screen) => {
     if (screen.id == selectScreenForShow.value) return screen;
   });
@@ -87,7 +137,7 @@ showForm.addEventListener("submit", (e) => {
     cinemaId: Number(selectCinemaForShow.value),
     screenId: Number(selectScreenForShow.value),
     movieId: Number(selectMovieForShow.value),
-    showData: formData.get("showDate"),
+    showDate: formData.get("showDate"),
     showStartTime: formData.get("showStartTime"),
     showEndTime: formData.get("showEndTime"),
     language: selectShowLanguage.value,
@@ -109,4 +159,6 @@ showForm.addEventListener("submit", (e) => {
   shows.data.push(newShow);
   saveToLocalStorage("shows", shows);
   showForm.reset();
+  displayShows();
 });
+displayShows();
