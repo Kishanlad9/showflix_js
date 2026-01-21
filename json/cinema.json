@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Inox-Rajhans",
+      "address": "Deep kamal mall,Sarthana Jakat Naka, Surat",
+      "services": ["Recliner", "Parking", "Food and bavrages", "IMAX"],
+      "contact": "8527419630",
+      "logo": "inox.png",
+      "isActive": true,
+      "createdAt": "2023-10-01T10:00:00Z",
+      "updatedAt": "2023-10-15T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Cinezza Multiplex",
+      "address": "Near D-mart, Mota Varachha, Surat",
+      "services": ["Recliner", "Parking", "Food and bavrages"],
+      "contact": "7539518520",
+      "logo": "common.png",
+      "isActive": true,
+      "createdAt": "2023-10-01T10:00:00Z",
+      "updatedAt": "2023-10-15T12:00:00Z"
+    }
+  ]
+}

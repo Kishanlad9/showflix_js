@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showflix</title>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/seat_booking.css">
+
+    <!-- swiper slider CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+        integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- wow.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+</head>
+
+<body class="custom-black-bg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark shadow bg-transperent">
+        <div class="container-sm">
+            <div class="col-3">
+                <a class="navbar-brand" href="#"><img src="../assets/images/logo/Showflix_logo.png"
+                        class="img-fluid w-50" alt=""></a>
+            </div>
+            <button class="navbar-toggler border border-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-white rounded-2"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="w-100 d-flex flex-wrap justify-content-around align-items-center gap-2">
+                    <ul class="navbar-nav d-flex gap-2 flex-wrap  text-center mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="cinemas.html">Cinema</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Premium</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-magnifying-glass fa-xl text-white"></i>
+                        <i class="fa-solid fa-user text-white fa-xl"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Seat Selection -->
+        <section class="py-3 red-gradient-right">
+            <!-- <img src="../assets/images/cinema-wallpaper-2048x1152.jpg" class="w-100" alt=""> -->
+            <div class="container bg-white rounded-3">
+                <div class="d-flex flex-wrap justify-content-center align-items-center  flex-column">
+                    <h3>Kantara: A Legend Chapter-1</h3>
+                    <p>10-Nov, 08:30 PM at Cinepolis Imperial Square Mall, Adajan, Surat</p>
+                </div>
+                <!-- Time slider -->
+                <!-- <div class="d-flex flex-wrap">
+                    <span>10-Mon</span>
+                    <div class="select-time d-flex">
+                        <div>
+                            <button class="booking-btn rounded-3 text-center  ">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span class="text-light">DOLBY 5.1</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="booking-btn rounded-3 text-center ">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span class="text-light">DOLBY 5.1</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="booking-btn rounded-3 text-center ">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span class="text-light">DOLBY 5.1</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="booking-btn rounded-3 text-center ">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span class="text-light">DOLBY 5.1</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="booking-btn rounded-3 text-center ">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span class="text-light">DOLBY 5.1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+                <hr>
+
+                <!-- seat selection -->
+                <div class="container">
+                    <!-- Header / Legend -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                        <h5 class="mb-0">Select Seats</h5>
+                        <div class="d-flex align-items-center gap-3 small text-secondary">
+                            <span class="d-inline-flex align-items-center gap-2">
+                                <span class="border rounded-3 px-3 py-2">1</span> Available
+                            </span>
+                            <span class="d-inline-flex align-items-center gap-2">
+                                <span class="rounded-3 px-3 py-2 text-white" style="background:#6f42c1;">1</span>
+                                Selected
+                            </span>
+                            <span class="d-inline-flex align-items-center gap-2">
+                                <span class="border rounded-3 px-3 py-2 text-secondary">×</span> Sold/Blocked
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="vstack bg-white gap-4">
+                        <!-- Platinum -->
+                        <div class="text-center py-2">
+                            <div class="fw-semibold zone-title">
+                                <span class="text-uppercase">Platinum</span> : <span> ₹300</span>
+                            </div>
+                        </div>
+                        <!-- Row A -->
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">A</div>
+                            <div class="d-flex gap-2 justify-content-center mx-auto">
+                                <!-- Available seats -->
+                                <input class="btn-check" id="A1" type="checkbox" autocomplete="off">
+                                <label class="btn btn-outline-seat seat-label" for="A1">1</label>
+
+                                <input class="btn-check" id="A2" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A2">2</label>
+
+                                <input class="btn-check" id="A3" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A3">3</label>
+
+                                <input class="btn-check" id="A4" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A4">4</label>
+
+                                <input class="btn-check" id="A5" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A5">5</label>
+
+                                <input class="btn-check" id="A7" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A7">7</label>
+
+                                <input class="btn-check" id="A8" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A8">8</label>
+
+                                <input class="btn-check" id="A9" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A9">9</label>
+
+                                <input class="btn-check" id="A10" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A10">10</label>
+
+                                <input class="btn-check" id="A11" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A11">11</label>
+
+                                <input class="btn-check" id="A12" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A12">12</label>
+
+                                <input class="btn-check" id="A13" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="A13">13</label>
+                            </div>
+                        </div>
+                        <!-- B row -->
+                        <div class="d-flex align-items-center ">
+                            <div class="row-label me-2">B</div>
+                            <div class="d-flex flex-wrap seat-group mx-auto">
+                                <!-- 1–6 -->
+                                <input class="btn-check" id="B1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B1">1</label>
+                                <input class="btn-check" id="B2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B2">2</label>
+                                <input class="btn-check" id="B3" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="B3">3</label>
+                                <input class="btn-check" id="B4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B4">4</label>
+                                <input class="btn-check" id="B5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B5">5</label>
+                                <input class="btn-check" id="B6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B6">6</label>
+                                <!-- Booked seats -->
+                                <input class="btn-check" id="B7" type="checkbox" disabled="">
+                                <label class="btn btn-outline-seat seat-label sold" for="B7">7</label>
+                                <input class="btn-check" id="B8" type="checkbox" disabled="">
+                                <label class="btn btn-outline-seat seat-label sold" for="B8">8</label>
+
+                                <span class="mx-3"></span>
+
+                                <!-- 7–16 -->
+                                <input class="btn-check" id="B7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B7">7</label>
+                                <input class="btn-check" id="B8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B8">8</label>
+                                <input class="btn-check" id="B9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B9">9</label>
+                                <input class="btn-check" id="B10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B10">10</label>
+                                <input class="btn-check" id="B11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B11">11</label>
+                                <input class="btn-check" id="B12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B12">12</label>
+                                <input class="btn-check" id="B13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B13">13</label>
+                                <input class="btn-check" id="B14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B14">14</label>
+                                <input class="btn-check" id="B15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B15">15</label>
+                                <input class="btn-check" id="B16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="B16">16</label>
+                            </div>
+                        </div>
+
+                        <!-- Executive -->
+                        <div class="text-center py-2">
+                            <div class="fw-semibold zone-title">
+                                <span class="text-uppercase">Executive</span> : <span> ₹250</span>
+                            </div>
+                        </div>
+                        <!-- Row C -->
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">C</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="C1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C1">1</label>
+                                <input class="btn-check" id="C2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C2">2</label>
+                                <input class="btn-check" id="C3" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C3">3</label>
+                                <input class="btn-check" id="C4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C4">4</label>
+                                <input class="btn-check" id="C5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="C6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C6">6</label>
+                                <input class="btn-check" id="C7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C7">7</label>
+                                <input class="btn-check" id="C8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C8">8</label>
+                                <input class="btn-check" id="C9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C9">9</label>
+                                <input class="btn-check" id="C10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C10">10</label>
+                                <input class="btn-check" id="C11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C11">11</label>
+                                <input class="btn-check" id="C12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C12">12</label>
+                                <input class="btn-check" id="C13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C13">13</label>
+                                <input class="btn-check" id="C14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C14">14</label>
+                                <input class="btn-check" id="C15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C15">15</label>
+                                <input class="btn-check" id="C16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="C17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C17">17</label>
+                                <input class="btn-check" id="C18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C18">18</label>
+                                <input class="btn-check" id="C19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C19">19</label>
+                                <input class="btn-check" id="C20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C20">20</label>
+                                <input class="btn-check" id="C21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="C21">21</label>
+                            </div>
+                        </div>
+
+                        <!-- D row -->
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">D</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="D1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D1">1</label>
+                                <input class="btn-check" id="D2" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="D2">2</label>
+                                <input class="btn-check" id="D3" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="D3">3</label>
+                                <input class="btn-check" id="D4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D4">4</label>
+                                <input class="btn-check" id="D5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="D6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D6">6</label>
+                                <input class="btn-check" id="D7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D7">7</label>
+                                <input class="btn-check" id="D8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D8">8</label>
+                                <input class="btn-check" id="D9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D9">9</label>
+                                <input class="btn-check" id="D10" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="D10">10</label>
+                                <input class="btn-check" id="D11" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="D11">11</label>
+                                <input class="btn-check" id="D12" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="D12">12</label>
+                                <input class="btn-check" id="D13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D13">13</label>
+                                <input class="btn-check" id="D14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D14">14</label>
+                                <input class="btn-check" id="D15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D15">15</label>
+                                <input class="btn-check" id="D16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="D17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D17">17</label>
+                                <input class="btn-check" id="D18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D18">18</label>
+                                <input class="btn-check" id="D19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D19">19</label>
+                                <input class="btn-check" id="D20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D20">20</label>
+                                <input class="btn-check" id="D21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="D21">21</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">E</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="E1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E1">1</label>
+                                <input class="btn-check" id="E2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E2">2</label>
+                                <input class="btn-check" id="E3" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E3">3</label>
+                                <input class="btn-check" id="E4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E4">4</label>
+                                <input class="btn-check" id="E5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="E6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E6">6</label>
+                                <input class="btn-check" id="E7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E7">7</label>
+                                <input class="btn-check" id="E8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E8">8</label>
+                                <input class="btn-check" id="E9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E9">9</label>
+                                <input class="btn-check" id="E10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E10">10</label>
+                                <input class="btn-check" id="E11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E11">11</label>
+                                <input class="btn-check" id="E12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E12">12</label>
+                                <input class="btn-check" id="E13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E13">13</label>
+                                <input class="btn-check" id="E14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E14">14</label>
+                                <input class="btn-check" id="E15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E15">15</label>
+                                <input class="btn-check" id="E16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="E17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E17">17</label>
+                                <input class="btn-check" id="E18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E18">18</label>
+                                <input class="btn-check" id="E19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E19">19</label>
+                                <input class="btn-check" id="E20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E20">20</label>
+                                <input class="btn-check" id="E21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="E21">21</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">F</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="F1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F1">1</label>
+                                <input class="btn-check" id="F2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F2">2</label>
+                                <input class="btn-check" id="F3" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F3">3</label>
+                                <input class="btn-check" id="F4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F4">4</label>
+                                <input class="btn-check" id="F5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="F6" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="F6">6</label>
+                                <input class="btn-check" id="F7" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="F7">7</label>
+                                <input class="btn-check" id="F8" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="F8">8</label>
+                                <input class="btn-check" id="F9" type="checkbox" disabled=""><label
+                                    class="btn btn-outline-seat seat-label sold" for="F9">9</label>
+                                <input class="btn-check" id="F10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F10">10</label>
+                                <input class="btn-check" id="F11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F11">11</label>
+                                <input class="btn-check" id="F12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F12">12</label>
+                                <input class="btn-check" id="F13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F13">13</label>
+                                <input class="btn-check" id="F14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F14">14</label>
+                                <input class="btn-check" id="F15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F15">15</label>
+                                <input class="btn-check" id="F16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="F17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F17">17</label>
+                                <input class="btn-check" id="F18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F18">18</label>
+                                <input class="btn-check" id="F19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F19">19</label>
+                                <input class="btn-check" id="F20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F20">20</label>
+                                <input class="btn-check" id="F21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="F21">21</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">G</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="G1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G1">1</label>
+                                <input class="btn-check" id="G2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G2">2</label>
+                                <input class="btn-check" id="G3" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G3">3</label>
+                                <input class="btn-check" id="G4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G4">4</label>
+                                <input class="btn-check" id="G5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="G6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G6">6</label>
+                                <input class="btn-check" id="G7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G7">7</label>
+                                <input class="btn-check" id="G8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G8">8</label>
+                                <input class="btn-check" id="G9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G9">9</label>
+                                <input class="btn-check" id="G10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G10">10</label>
+                                <input class="btn-check" id="G11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G11">11</label>
+                                <input class="btn-check" id="G12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G12">12</label>
+                                <input class="btn-check" id="G13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G13">13</label>
+                                <input class="btn-check" id="G14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G14">14</label>
+                                <input class="btn-check" id="G15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G15">15</label>
+                                <input class="btn-check" id="G16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="G17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G17">17</label>
+                                <input class="btn-check" id="G18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G18">18</label>
+                                <input class="btn-check" id="G19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G19">19</label>
+                                <input class="btn-check" id="G20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G20">20</label>
+                                <input class="btn-check" id="G21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="G21">21</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">H</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <!-- 1–5 (left block) -->
+                                <input class="btn-check" id="H1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H1">1</label>
+                                <input class="btn-check" id="H2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H2">2</label>
+                                <input class="btn-check" id="H3" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H3">3</label>
+                                <input class="btn-check" id="H4" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H4">4</label>
+                                <input class="btn-check" id="H5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H5">5</label>
+                                <span class="mx-3"></span>
+                                <!-- 6–16 (right block) -->
+                                <input class="btn-check" id="H6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H6">6</label>
+                                <input class="btn-check" id="H7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H7">7</label>
+                                <input class="btn-check" id="H8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H8">8</label>
+                                <input class="btn-check" id="H9" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H9">9</label>
+                                <input class="btn-check" id="H10" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H10">10</label>
+                                <input class="btn-check" id="H11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H11">11</label>
+                                <input class="btn-check" id="H12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H12">12</label>
+                                <input class="btn-check" id="H13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H13">13</label>
+                                <input class="btn-check" id="H14" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H14">14</label>
+                                <input class="btn-check" id="H15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H15">15</label>
+                                <input class="btn-check" id="H16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H16">16</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="H17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H17">17</label>
+                                <input class="btn-check" id="H18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H18">18</label>
+                                <input class="btn-check" id="H19" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H19">19</label>
+                                <input class="btn-check" id="H20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H20">20</label>
+                                <input class="btn-check" id="H21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="H21">21</label>
+                            </div>
+                        </div>
+
+                        <!-- Royal seats -->
+                        <div class="text-center py-2">
+                            <div class="fw-semibold zone-title">ROYAL : ₹200</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">I</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <input class="btn-check" id="I1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I1">1</label>
+                                <input class="btn-check" id="I2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I2">2</label>
+                                <input class="btn-check" id="I3" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="I3">3</label>
+                                <input class="btn-check" id="I4" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="I4">4</label>
+                                <input class="btn-check" id="I5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I5">5</label>
+                                <input class="btn-check" id="I6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I6">6</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="I7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I7">7</label>
+                                <input class="btn-check" id="I8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I8">8</label>
+
+                                <input class="btn-check" id="I9" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="I9">9</label>
+
+                                <input class="btn-check" id="I10" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="I10">10</label>
+
+                                <input class="btn-check" id="I11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I11">11</label>
+                                <input class="btn-check" id="I12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I12">12</label>
+                                <input class="btn-check" id="I13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I13">13</label>
+
+                                <input class="btn-check" id="I14" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="I14">14</label>
+
+                                <input class="btn-check" id="I15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I15">15</label>
+                                <input class="btn-check" id="I16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I16">16</label>
+
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="I17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I17">17</label>
+                                <input class="btn-check" id="I18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I18">18</label>
+
+                                <input class="btn-check" id="I19" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="I19">19</label>
+
+                                <input class="btn-check" id="I20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I20">20</label>
+                                <input class="btn-check" id="I21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="I21">21</label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">J</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <input class="btn-check" id="J1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J1">1</label>
+                                <input class="btn-check" id="J2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J2">2</label>
+                                <input class="btn-check" id="J3" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="J3">3</label>
+                                <input class="btn-check" id="J4" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="J4">4</label>
+                                <input class="btn-check" id="J5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J5">5</label>
+                                <input class="btn-check" id="J6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J6">6</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="J7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J7">7</label>
+                                <input class="btn-check" id="J8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J8">8</label>
+
+                                <input class="btn-check" id="J9" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="J9">9</label>
+
+                                <input class="btn-check" id="J10" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="J10">10</label>
+
+                                <input class="btn-check" id="J11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J11">11</label>
+                                <input class="btn-check" id="J12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J12">12</label>
+                                <input class="btn-check" id="J13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J13">13</label>
+
+                                <input class="btn-check" id="J14" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="J14">14</label>
+
+                                <input class="btn-check" id="J15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J15">15</label>
+                                <input class="btn-check" id="J16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J16">16</label>
+
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="J17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J17">17</label>
+                                <input class="btn-check" id="J18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J18">18</label>
+
+                                <input class="btn-check" id="J19" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="J19">19</label>
+
+                                <input class="btn-check" id="J20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J20">20</label>
+                                <input class="btn-check" id="J21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="J21">21</label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">K</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <input class="btn-check" id="K1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K1">1</label>
+                                <input class="btn-check" id="K2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K2">2</label>
+                                <input class="btn-check" id="K3" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="K3">3</label>
+                                <input class="btn-check" id="K4" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="K4">4</label>
+                                <input class="btn-check" id="K5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K5">5</label>
+                                <input class="btn-check" id="K6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K6">6</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="K7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K7">7</label>
+                                <input class="btn-check" id="K8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K8">8</label>
+
+                                <input class="btn-check" id="K9" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="K9">9</label>
+
+                                <input class="btn-check" id="K10" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="K10">10</label>
+
+                                <input class="btn-check" id="K11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K11">11</label>
+                                <input class="btn-check" id="K12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K12">12</label>
+                                <input class="btn-check" id="K13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K13">13</label>
+
+                                <input class="btn-check" id="K14" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="K14">14</label>
+
+                                <input class="btn-check" id="K15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K15">15</label>
+                                <input class="btn-check" id="K16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K16">16</label>
+
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="K17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K17">17</label>
+                                <input class="btn-check" id="K18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K18">18</label>
+
+                                <input class="btn-check" id="K19" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="K19">19</label>
+
+                                <input class="btn-check" id="K20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K20">20</label>
+                                <input class="btn-check" id="K21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="K21">21</label>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="row-label me-2">L</div>
+                            <div class="d-flex flex-wrap seat-group">
+                                <input class="btn-check" id="L1" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L1">1</label>
+                                <input class="btn-check" id="L2" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L2">2</label>
+                                <input class="btn-check" id="L3" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="L3">3</label>
+                                <input class="btn-check" id="L4" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="L4">4</label>
+                                <input class="btn-check" id="L5" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L5">5</label>
+                                <input class="btn-check" id="L6" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L6">6</label>
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="L7" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L7">7</label>
+                                <input class="btn-check" id="L8" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L8">8</label>
+
+                                <input class="btn-check" id="L9" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="L9">9</label>
+
+                                <input class="btn-check" id="L10" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="L10">10</label>
+
+                                <input class="btn-check" id="L11" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L11">11</label>
+                                <input class="btn-check" id="L12" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L12">12</label>
+                                <input class="btn-check" id="L13" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L13">13</label>
+
+                                <input class="btn-check" id="L14" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label " for="L14">14</label>
+
+                                <input class="btn-check" id="L15" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L15">15</label>
+                                <input class="btn-check" id="L16" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L16">16</label>
+
+                                <span class="mx-3"></span>
+                                <input class="btn-check" id="L17" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L17">17</label>
+                                <input class="btn-check" id="L18" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L18">18</label>
+
+                                <input class="btn-check" id="L19" type="checkbox">
+                                <label class="btn btn-outline-seat seat-label" for="L19">19</label>
+
+                                <input class="btn-check" id="L20" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L20">20</label>
+                                <input class="btn-check" id="L21" type="checkbox"><label
+                                    class="btn btn-outline-seat seat-label" for="L21">21</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <img src="../assets/images/icons/movie-screen.png" class="w-75 p-5" alt="">
+                    </div>
+                    <!-- Totals / CTA -->
+                    <div class="d-flex align-items-center justify-content-between mb-4 p-3 border-top">
+                        <div class="small text-secondary">Selected: <span id="selectedCount">2</span> • Total: ₹<span
+                                id="totalAmount">400</span></div>
+                        <a href="./ticket_confirm.html"><button class="btn btn-primary bg-primary">Proceed</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-5 red-gradient-left">
+        <div class="container-sm position-relative text-white">
+            <img src="../assets/images/logo/Showflix_logo.png" class="w-100 z-n1 opacity-25 position-absolute start-0 "
+                alt="">
+            <div class="row justify-content-evenly flex-wrap ">
+                <div class="col-md-6">
+                    <h3>Showflix</h3>
+                    <p class="text-justify mb-3">A cutting-edge product by Wee technology, is India’s first
+                        ticketing
+                        platform
+                        that
+                        removes
+                        convenience fees, empowering users to attend more movies without extra costs. Designed for
+                        both online and offline ticketing. We delivers a
+                        comprehensive solution that makes user to booking effortless and enjoyable movies.
+                    </p>
+                    <div class="py-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="ms-2">+91 1234567890</span>
+                    </div>
+                    <div class="py-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="ms-2">info@showflix.com</span>
+                    </div>
+                    <div class="py-2">
+                        <h4>Follow Us</h4>
+                        <i class="fa-brands fa-facebook fa-xl  me-3"></i>
+                        <i class="fa-brands fa-twitter fa-xl me-3"></i><i class="fa-brands fa-instagram fa-xl me-3"></i>
+                        <i class="fa-brands fa-linkedin fa-xl me-3"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li>My Booking</li>
+                        <li>Movies</li>
+                        <li>Cinemas</li>
+                        <li>Trailers</li>
+                        <li>Up Coming Movies</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="px-5">© 2025 Bytepixel Innovation Pvt. Ltd. All
+                Rights Reserved</div>
+        </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper slider js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

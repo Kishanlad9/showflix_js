@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.woff2")
+      format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.woff")
+      format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.ttf")
+      format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraLight.svg#Manrope-ExtraLight")
+      format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-Bold.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Bold.woff2") format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-Bold.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-Bold.ttf") format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Bold.svg#Manrope-Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.woff2")
+      format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.ttf")
+      format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-ExtraBold.svg#Manrope-ExtraBold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-Light.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Light.woff2") format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-Light.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-Light.ttf") format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Light.svg#Manrope-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-Regular.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Regular.woff2") format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-Regular.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-Regular.ttf")
+      format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Regular.svg#Manrope-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-Medium.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Medium.woff2") format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-Medium.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-Medium.ttf") format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-Medium.svg#Manrope-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/plugins/fonts/manrope/Manrope-SemiBold.eot");
+  src:
+    url("../assets/plugins/fonts/manrope/Manrope-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/plugins/fonts/manrope/Manrope-SemiBold.woff2")
+      format("woff2"),
+    url("../assets/plugins/fonts/manrope/Manrope-SemiBold.woff") format("woff"),
+    url("../assets/plugins/fonts/manrope/Manrope-SemiBold.ttf")
+      format("truetype"),
+    url("../assets/plugins/fonts/manrope/Manrope-SemiBold.svg#Manrope-SemiBold")
+      format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bs-primary-rgb: 36, 0, 91;
+  /* #23A6F0 */
+  --bs-secondary-rgb: 243 232 255;
+  /* #252B42 */
+  --bs-light-rgb: 115, 115, 115;
+  /* #737373 */
+  --bs-info-rgb: 142, 194, 242;
+  /* #8EC2F2 */
+  --bs-warning-rgb: 243, 205, 3;
+  /* #F3CD03 */
+  --bs-success-rgb: 45, 192, 113;
+  /* #2DC071 */
+  /* --bs-border-color: 153, 153, 153; */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 0.2px;
+  /* background: linear-gradient(
+    180deg,
+    rgba(200, 179, 223, 0.8) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  ); */
+  background-repeat: no-repeat;
+}
+/* common css */
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 57px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.custom-black-bg {
+  background-color: #141414;
+}
+
+.swiper {
+  width: 100%;
+  min-height: 350px;
+}
+
+iframe {
+  width: 100%;
+  min-height: 550px;
+}
+
+.frame-4x4 {
+  width: 400px;
+  height: 450px;
+}
+
+.frame-3x3 {
+  width: 300px;
+  height: 350px;
+}
+
+.frame-2x2 {
+  width: 200px;
+  height: 250px;
+}
+
+.red-gradient-left {
+  background: linear-gradient(
+    -225deg,
+    rgba(84, 3, 3, 0.5) 10%,
+    rgba(229, 0, 0, 0) 90%
+  );
+}
+.red-gradient-right {
+  background: linear-gradient(
+    225deg,
+    rgba(84, 3, 3, 0.5) 10%,
+    rgba(229, 0, 0, 0) 90%
+  );
+}
+
+.gray-border {
+  border: 2px solid rgba(82, 80, 80, 0.7);
+}
+
+.popup-transition:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.medium-transition:hover {
+  transition: 1.5s;
+}
+
+.white-line {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 100%,
+    #e50000 16.67%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.red-line {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgba(229, 0, 0, 0) 0%,
+    #e50000 16.67%,
+    rgba(229, 0, 0, 0) 100%
+  );
+}

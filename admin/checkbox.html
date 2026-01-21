@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" id="" name="cars" value="Suzuki">
+    <input type="checkbox" id="" name="cars" value="BMW">
+    <input type="checkbox" id="" name="cars" value="Mahindra">
+    <input type="checkbox" id="" name="cars" value="Tata">
+    <input type="button" value="Submit">
+    <script>
+        let btn = document.querySelector('input[type="button"]');
+        btn.addEventListener('click', () => {
+            let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            let values = [];
+            checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            console.log(values);
+        });
+    </script>
+</body>
+
+</html>

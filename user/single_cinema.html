@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showflix</title>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- swiper slider CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+        integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- wow.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+</head>
+
+<body class="custom-black-bg">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-dark shadow bg-transperent">
+        <div class="container-sm">
+            <div class="col-3">
+                <a class="navbar-brand" href="#"><img src="../assets/images/logo/Showflix_logo.png"
+                        class="img-fluid w-50" alt=""></a>
+            </div>
+            <button class="navbar-toggler border border-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-white rounded-2"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="w-100 d-flex flex-wrap justify-content-around align-items-center gap-2">
+                    <ul class="navbar-nav d-flex gap-2 flex-wrap  text-center mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="cinemas.html">Cinema</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Premium</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-magnifying-glass fa-xl text-white"></i>
+                        <i class="fa-solid fa-user text-white fa-xl"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Cinema section -->
+        <section class="py-3">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center gap-4 text-white">
+                    <div class="col-md-3">
+                        <img src="../assets/images/poster/cinema_hall/cinepolis.jpg" alt="Cinema Thumbnail"
+                            class="img-fluid rounded popup-transition shadow-lg">
+                    </div>
+                    <div class="cinema-details">
+                        <h3>Cinepolis Imperial Square Mall, Adajan, Surat</h3>
+                        <p>Imperial Mall, Hazira Rd, Guru Ram Pavan Bhumi, Adajan Gam, Adajan, Surat,
+                            Gujarat 395009, India</p>
+                        <strong>Services :</strong>
+                        <div class="d-flex flex-wrap justify-content-evenly flex-column gap-2 py-3">
+                            <div class="service">
+                                <i class="fa-solid fa-shield-halved text-danger fa-xl"></i>
+                                <span>Non-Cancelable</span>
+                            </div>
+                            <div class="service">
+                                <i class="fa-solid fa-square-parking fa-xl text-danger"></i>
+                                <span>Parking</span>
+                            </div>
+                            <div class="service">
+                                <i class="fa-solid fa-burger fa-xl text-danger"></i>
+                                <span>Food &amp; Baverages</span>
+                            </div>
+                            <div class="service">
+                                <i class="fa-solid fa-couch fa-xl text-danger"></i>
+                                <span>Recliner</span>
+                            </div>
+                            <div class="service">
+                                <i class="fa-solid fa-qrcode fa-xl text-danger"></i>
+                                <span>Digital Payments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Booking section -->
+        <section class="py-3">
+            <div class="container-md">
+                <!-- Date -->
+                <div class="d-flex gap-3 flex-wrap align-items-baseline text-white">
+                    <h4>Select Date:</h4>
+                    <form action="">
+                        <div class="d-flex flex-wrap gap-2 align-items-center text-white" role="group"
+                            aria-label="radio toggle button group">
+                            <input type="radio" class="btn-check " name="btnradio" id="btnradio1" autocomplete="off"
+                                checked="">
+                            <label class="btn btn-outline-danger" for="btnradio1">25 Mon</label>
+                            <span class="fs-1">|</span>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio2">26 Tue</label>
+                            <span class="fs-1">|</span>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio3">27 Wed</label>
+                            <span class="fs-1">|</span>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio4">28 Thu</label>
+                            <span class="fs-1">|</span>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio5">29 Fri</label>
+                            <span class="fs-1">|</span>
+                            <!-- custom date collapse -->
+                            <div class="collapse collapse-certical " id="date-picker-collapse">
+                                <input type="date" id="datepicker" class="form-control" placeholder="DD-MM-YYYY">
+                            </div>
+                            <input type="checkbox" id="btnradio6" class="btn-check" data-bs-toggle="collapse"
+                                data-bs-target="#date-picker-collapse" aria-expanded="false"
+                                aria-controls="date-picker-collapse">
+                            <label class="btn" for="btnradio6"> <i
+                                    class="fa-solid fa-calendar-days fa-2xl text-danger"></i></label>
+                        </div>
+                    </form>
+                </div>
+                <!-- Redline -->
+                <div class="red-line my-3">
+                </div>
+                <!-- Availability -->
+                <div class="d-flex flex-wrap bg-white align-items-center gap-2 rounded-3 p-2 mb-3">
+                    <i class="fa-solid fa-circle text-black"></i> <span>Available</span>|
+                    <i class="fa-solid fa-circle text-warning"></i> <span>Filling fast</span>|
+                    <i class="fa-solid fa-circle text-danger"></i> <span>Almost full</span>
+                </div>
+                <!-- Show selection -->
+                <ul class="list-group list-group-flush my-5">
+                    <li class="list-inline-item">
+                        <div class="d-flex flex-wrap align-items-center text-white gap-2">
+                            <img src="../assets/images/poster/kantara.jpg"
+                                class="frame-2x2 rounded-4 popup-transition p-1" alt="">
+                            <div class="cinema-info">
+                                <a class="fs-5 text-white" href="single_movie.html">Kantara : A Legend Chapter 1</a>
+                                <p>UA16+ | Kannada | Hindi | Thriller</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 justify-content-start  p-3">
+                            <button class="btn btn-outline-danger rounded-3 text-center px-5 py-2">
+                                <span class="">8:00 AM</span>
+                                <br>
+                                <span>DOLBY 5.1</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">9:30 AM</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">11:10 AM</span>
+                                <br>
+                                <span>DOLBY 5.1</span>
+                            </button>
+                            <button class="btn btn-outline-secondary rounded-3 text-center px-5 py-2">
+                                <span class="text-warning">12:10 PM</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">1:00 PM</span>
+                                <br>
+                                <span>DOLBY 5.1</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">2:30 PM</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">6:30 PM</span>
+                            </button>
+                            <button class="btn btn-outline-secondary rounded-3 text-center px-5 py-2">
+                                <span class="text-warning">8:00 PM</span>
+                                <br>
+                                <span>DOLBY 5.1</span>
+                            </button>
+                            <button class="btn btn-outline-secondary rounded-3 text-center px-5 py-2">
+                                <span class="text-warning">9:30 PM</span>
+                            </button>
+                            <button class="btn btn-outline-light rounded-3 text-center px-5 py-2">
+                                <span class="">11:00 PM</span>
+                            </button>
+                            <button class="btn btn-outline-danger rounded-3 text-center px-5 py-2">
+                                <span class="">12:10 AM</span>
+                                <br>
+                                <span>DOLBY 5.1</span>
+                            </button>
+                        </div>
+                        <div class="red-line my-3">
+                        </div>
+                    </li>
+                    <li class="list-inline-item mt-5">
+                        <div class="d-flex flex-wrap align-items-center text-white gap-2">
+                            <div class="d-block">
+                                <img src="../assets/images/poster/Jatadhara.jpg"
+                                    class="frame-2x2 rounded-4 popup-transition p-1" alt="">
+                            </div>
+                            <div class="cinema-info">
+                                <a class="text-white fs-5" href="">Jatadhara</a>
+                                <p>UA16+ | Hindi | Fantasy</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 justify-content-start p-3 ">
+                            <ul class="list-unstyled list-inline-group  d-flex flex-wrap gap-3">
+                                <li class="">
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light ">
+                                        <span class="">9:00 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">10:30 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">11:30 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">12:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>2:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">2:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">4:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span>8:00 PM</span>
+
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">9:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">11:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">12:10 AM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="red-line my-3">
+                        </div>
+                    </li>
+                    <li class="list-inline-item mt-5">
+                        <div class="d-flex flex-wrap align-items-center text-white gap-2">
+                            <div class="d-block">
+                                <img src="../assets/images/poster/Baramulla.jpg"
+                                    class="frame-2x2 rounded-4 popup-transition p-1" alt="">
+                            </div>
+                            <div class="cinema-info">
+                                <a class="text-white fs-5" href="">Baramulla</a>
+                                <p>UA13+ &#124; Hindi &#124; Thriller</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 justify-content-start p-3 ">
+                            <ul class="list-unstyled list-inline-group d-flex flex-wrap gap-3">
+                                <li class="">
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light ">
+                                        <span class="">8:30 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">9:45 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">10:20 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">12:10 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">1:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">3:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>5:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">7:00 PM</span>
+
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">9:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">11:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>12:10 AM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="red-line my-3">
+                        </div>
+                    </li>
+                    <li class="list-inline-item mt-5">
+                        <div class="d-flex flex-wrap align-items-center text-white gap-2">
+                            <img src="../assets/images/poster/Upcoming_movies/Avatar-Fire-and-Ash_.jpg"
+                                class="frame-2x2 rounded-4 popup-transition p-1" alt="">
+                            <div class="cinema-info">
+                                <a class="text-white fs-5" href="">Avatar: Fire and Ash</a>
+                                <p>UA13+ &#124; English &#124; Adventure &#124; Thriller</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 justify-content-start p-3 ">
+                            <ul class="list-unstyled list-inline-group d-flex flex-wrap gap-3">
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light ">
+                                        <span class="">10:00 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>10:45 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">11:30 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">12:10 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">1:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">3:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>5:00 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span>8:00 PM</span>
+
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">10:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>11:00 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="red-line my-3">
+                        </div>
+                    </li>
+                    <li class="list-inline-item mt-5">
+                        <div class="d-flex flex-wrap align-items-center text-white gap-2">
+                            <img src="../assets/images/poster/Upcoming_movies/dusshera.jpg"
+                                class="frame-2x2 rounded-4 popup-transition p-1" alt="">
+                            <div class="cinema-info">
+                                <a class="text-white fs-5" href="">Dusshera</a>
+                                <p>UA16+ &#124; Gujarati &#124; Horrer &#124; Thriller</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3 justify-content-start p-3 ">
+                            <ul class="list-unstyled list-inline-group d-flex flex-wrap gap-3">
+                                <li class="">
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light ">
+                                        <span class="">9:30 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">10:20 AM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-secondary">
+                                        <span class="text-warning">12:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">1:10 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-danger">
+                                        <span>3:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">5:30 PM</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">8:30 PM</span>
+
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="rounded-3 text-center px-5 py-2 btn btn-outline-light">
+                                        <span class="">10:45 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+                <!-- Pagination for show -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link text-danger" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="py-5 red-gradient-left">
+        <div class="container-sm position-relative text-white">
+            <img src="../assets/images/logo/Showflix_logo.png" class="w-100 z-n1 opacity-25 position-absolute start-0 "
+                alt="">
+            <div class="row justify-content-evenly flex-wrap ">
+                <div class="col-md-6">
+                    <h3>Showflix</h3>
+                    <p class="text-justify mb-3">A cutting-edge product by Wee technology, is India’s first
+                        ticketing
+                        platform
+                        that
+                        removes
+                        convenience fees, empowering users to attend more movies without extra costs. Designed for
+                        both online and offline ticketing. We delivers a
+                        comprehensive solution that makes user to booking effortless and enjoyable movies.
+                    </p>
+                    <div class="py-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="ms-2">+91 1234567890</span>
+                    </div>
+                    <div class="py-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="ms-2">info@showflix.com</span>
+                    </div>
+                    <div class="py-2">
+                        <h4>Follow Us</h4>
+                        <i class="fa-brands fa-facebook fa-xl  me-3"></i>
+                        <i class="fa-brands fa-twitter fa-xl me-3"></i><i class="fa-brands fa-instagram fa-xl me-3"></i>
+                        <i class="fa-brands fa-linkedin fa-xl me-3"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li>My Booking</li>
+                        <li>Movies</li>
+                        <li>Cinemas</li>
+                        <li>Trailers</li>
+                        <li>Up Coming Movies</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="px-5">© 2025 Bytepixel Innovation Pvt. Ltd. All
+                Rights Reserved</div>
+        </div>
+    </footer>
+
+    <!-- bootstrap js -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper slider js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

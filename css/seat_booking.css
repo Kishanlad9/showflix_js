@@ -1,0 +1,54 @@
+/* Seat look & states */
+.seat-label {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-weight: 500;
+}
+
+.btn-outline-seat {
+  --bs-btn-color: #6c757d;
+  --bs-btn-border-color: #ced4da;
+  --bs-btn-hover-bg: #f8f9fa;
+  --bs-btn-hover-border-color: #adb5bd;
+  --bs-btn-active-bg: #6f42c1;
+  --bs-btn-active-border-color: #6f42c1;
+  --bs-btn-disabled-color: #adb5bd;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #e9ecef;
+}
+
+.sold {
+  position: relative;
+  color: transparent !important;
+}
+
+.sold::after {
+  content: "×";
+  color: #adb5bd;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.row-label {
+  width: 2rem;
+  text-align: center;
+  font-weight: 600;
+  color: #6c757d;
+  user-select: none;
+}
+
+.seat-group {
+  gap: 0.6rem;
+}
+
+.zone-title {
+  letter-spacing: 0.5px;
+}

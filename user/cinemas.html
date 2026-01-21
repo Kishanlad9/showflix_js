@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showflix</title>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- swiper slider CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+        integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- wow.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .full-height {
+            min-height: 100%;
+        }
+
+        .full-height-scroll {
+            height: 100%;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        .layout-wrapper {
+            height: 100vh;
+        }
+
+        .logo-frame-sm {
+            width: 120px;
+            height: 120px;
+        }
+
+        .half-width {
+            width: 48%;
+        }
+    </style>
+    <script src="../js/common/common.js"></script>
+</head>
+
+<body class="custom-black-bg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark shadow bg-transperent">
+        <div class="container-sm">
+            <div class="col-3">
+                <a class="navbar-brand" href="#"><img src="../assets/images/logo/Showflix_logo.png"
+                        class="img-fluid w-50" alt=""></a>
+            </div>
+            <button class="navbar-toggler border border-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-white rounded-2"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="w-100 d-flex flex-wrap justify-content-around align-items-center gap-2">
+                    <ul class="navbar-nav d-flex gap-2 flex-wrap  text-center mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="cinemas.html">Cinema</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Premium</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <i class="fa-solid fa-magnifying-glass fa-xl text-white"></i>
+                        <i class="fa-solid fa-user text-white fa-xl"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- All Cinema -->
+        <section class="py-3">
+            <div class="container-md">
+                <h2 class="text-white">Cinema for you</h2>
+                <div class="d-flex flex-wrap text-white justify-content-between gap-3 w-100" id="cinema-list">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-5 red-gradient-left">
+        <div class="container-sm position-relative text-white">
+            <img src="../assets/images/logo/Showflix_logo.png" class="w-100 z-n1 opacity-25 position-absolute start-0 "
+                alt="">
+            <div class="row justify-content-evenly flex-wrap ">
+                <div class="col-md-6">
+                    <h3>Showflix</h3>
+                    <p class="text-justify mb-3">A cutting-edge product by Wee technology, is India’s first
+                        ticketing
+                        platform
+                        that
+                        removes
+                        convenience fees, empowering users to attend more movies without extra costs. Designed for
+                        both online and offline ticketing. We delivers a
+                        comprehensive solution that makes user to booking effortless and enjoyable movies.
+                    </p>
+                    <div class="py-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="ms-2">+91 1234567890</span>
+                    </div>
+                    <div class="py-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="ms-2">info@showflix.com</span>
+                    </div>
+                    <div class="py-2">
+                        <h4>Follow Us</h4>
+                        <i class="fa-brands fa-facebook fa-xl  me-3"></i>
+                        <i class="fa-brands fa-twitter fa-xl me-3"></i><i class="fa-brands fa-instagram fa-xl me-3"></i>
+                        <i class="fa-brands fa-linkedin fa-xl me-3"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled">
+                        <li>My Booking</li>
+                        <li>Movies</li>
+                        <li>Cinemas</li>
+                        <li>Trailers</li>
+                        <li>Up Coming Movies</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="px-5">© 2025 Bytepixel Innovation Pvt. Ltd. All
+                Rights Reserved</div>
+        </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper slider js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/user/cinema.js" type="module"></script>
+</body>
+
+</html>

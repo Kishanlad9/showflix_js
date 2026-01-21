@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../assets/css/admin_dashboard.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .width-250 {
+            width: 250px;
+        }
+
+        .full-height {
+            min-height: 100%;
+        }
+
+        .bg-gray {
+            background-color: #f5f5f5;
+        }
+
+        .frame-3x3 {
+            width: 250px;
+            height: 250px;
+        }
+
+        .width-200 {
+            width: 200px;
+        }
+
+        .full-height-scroll {
+            height: 100%;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+
+        .elementScale:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .layout-wrapper {
+            height: 100vh;
+        }
+    </style>
+    <script src="../assets/js/common/common.js"></script>
+    <script src="../assets/js/callAPI.js"></script>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container-fluid d-flex gap-3 p-3 border border-2 layout-wrapper">
+        <!-- Sidebar -->
+        <div class="width-250 full-height p-3 border rounded bg-white full-height-scroll">
+            <div class="logo-section">
+
+            </div>
+            <div class="links">
+                <div class="d-flex w-100 align-items-start">
+                    <div class="nav w-100 flex-column nav-pills " id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" href="./admin_dashboard.html" id="v-pills-dashboard-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" role="tab"
+                            aria-controls="v-pills-dashboard" aria-selected="true">
+                            Dashboard</a>
+                        <a class="nav-link" href="./admin_dashboard.html" id="v-pills-stock-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-stock" role="tab" aria-controls="v-pills-stock"
+                            aria-selected="false">Watch Stock</a>
+                        <a class="nav-link" href="./admin_dashboard.html" id="v-pills-billing-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-billing" role="tab" aria-controls="v-pills-billing"
+                            aria-selected="false">billing</a>
+                        <a class="nav-link" href="./admin_dashboard.html" id="v-pills-sales-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-sales" role="tab" aria-controls="v-pills-sales"
+                            aria-selected="false">sales</a>
+
+                        <div class="text-center text-secondary m-3">Watch Details</div>
+                        <a class="nav-link" href="./admin_dashboard.html" id="v-pills-watch-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-watch" role="tab" aria-controls="v-pills-watch"
+                            aria-selected="false">Watch</a>
+
+                        <a class="nav-link" href="./admin_dashboard.html" id="v-pills-brand-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-brand" role="tab" aria-controls="v-pills-brand"
+                            aria-selected="false">brand</a>
+                        <div class="text-center text-secondary m-3">Account Pages</div>
+                        <a class="nav-link" id="v-pills-Profile-tab" href="./admin_dashboard.html" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Profile</a>
+                        <a class="nav-link" id="v-pills-settings-tab" href="./admin_dashboard.html"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-settings" role="tab"
+                            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main window -->
+        <div class="bg-white full-height-scroll container border border-2 rounded-2">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel"
+                    aria-labelledby="v-pills-dashboard-tab" tabindex="0">I am dashboard</div>
+                <div class="tab-pane fade" id="v-pills-stock" role="tabpanel" aria-labelledby="v-pills-stock-tab"
+                    tabindex="0">
+                    <!-- Manage watch quantity here -->
+                    <div class="container p-3">
+                        <div class="d-flex flex-wrap gap-3">
+                            <div class="col-4-md border border-2 rounded-2">
+                                <form action="" id="stockForm" class="d-flex flex-column gap-3 p-3">
+                                    <select name="watchBrands" id="watchBrands" class="form-control" required></select>
+                                    <select name="watchNames" id="watchNames" class="form-control" required></select>
+                                    <input type="number" name="watchQuantity" id="watchQuantity" class="form-control"
+                                        placeholder="Quantity" required>
+                                    <input type="submit" name="submitStock" id="submitStock"
+                                        class="btn text-white black-btn">
+                                </form>
+                            </div>
+                            <div class="col-7 col-7-md p-3 flex-wrap border border-2 rounded-2">
+                                <table class="table table-hover table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Brand Name</th>
+                                            <th scope="col">Watch Name</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stocks-list">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-billing" role="tabpanel" aria-labelledby="v-pills-billing-tab"
+                    tabindex="0">I am billing</div>
+                <div class="tab-pane fade" id="v-pills-sales" role="tabpanel" aria-labelledby="v-pills-sales-tab"
+                    tabindex="0">I am sales</div>
+
+                <div class="tab-pane fade" id="v-pills-watch" role="tabpanel" aria-labelledby="v-pills-watch-tab"
+                    tabindex="0">
+                    <!-- all Watches -->
+                    <div class="container  p-3">
+                        <h1 class="text-center">Watches</h1>
+
+                        <!-- Add watch button -->
+                        <button type="button" class="btn btn-primary  mb-3" data-bs-toggle="modal"
+                            data-bs-target="#addWatchModel"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#fff">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                            Add</button>
+                        <!-- Model for add watch -->
+                        <div class="modal fade modal-lg" tabindex="-1" id="addWatchModel">
+                            <div class=" modal-dialog modal-dialog-centered modal-dialog-scrollable model-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addWatchTitle">Add Watch</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            onclick="formReset()" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-md d-flex flex-wrap">
+                                            <form action="" id="addWatchForm" class="w-100">
+                                                <!-- Basic Details -->
+                                                <h4>Basic Details</h4>
+                                                <div class="basic-details d-flex flex-wrap border rounded-2 p-3 ">
+                                                    <div class="col-6 col-6-md p-1 d-flex flex-column flex-wrap gap-3">
+                                                        <input type="text" class="form-control" placeholder="Id"
+                                                            name="productId" id="productId" required>
+                                                        <input type="text" class="form-control" placeholder="Watch Name"
+                                                            name="name" id="watchName" required>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Collection Name" name="collection"
+                                                            id="watchCollectionName" required>
+                                                        <input type="number" class="form-control" name="price"
+                                                            id="watchPrice" placeholder="Price" required>
+                                                    </div>
+                                                    <div class="col-6 col-6-md p-1 d-flex flex-wrap flex-column gap-3">
+
+                                                        <!-- Dynamically fetch -->
+                                                        <select name="brand" id="watchBrand" class="form-control"
+                                                            required>
+
+                                                        </select>
+                                                        <select name="category" id="category" class="form-control"
+                                                            required>
+                                                            <option value="" selected disabled>Select Gender
+                                                                category
+                                                            </option>
+                                                            <option value="Men">Men</option>
+                                                            <option value="Woman">Woman</option>
+                                                        </select>
+                                                        <select name="badges" id="badges" class="form-control" required>
+                                                            <option value="" selected disabled>Select Badge</option>
+                                                            <option value="Trending">Trending</option>
+                                                            <option value="New Arrival">New Arrival</option>
+                                                            <option value="Leave Soon">Leave soon</option>
+                                                        </select>
+                                                    </div>
+                                                    <textarea name="description" id="watchDescription"
+                                                        name="watchDescription" rows="4" class="w-100 form-control m-1"
+                                                        placeholder="Description of Watch" required></textarea>
+                                                </div>
+
+                                                <!-- Images  -->
+                                                <h4 class="mt-3">Images</h4>
+                                                <div class="images-insert d-flex flex-wrap border rounded-2 p-3 ">
+                                                    <input type="text" name="images" id="watchImageURL"
+                                                        class="form-control" placeholder="Image Link">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                            onclick="formReset()">Close</button>
+                                        <button type="submit" form="addWatchForm" class="btn btn-primary">Save
+                                            Watch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All watch display -->
+                        <div class="my-row d-flex gap-3 flex-wrap" id="watch-list"></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-brand" role="tabpanel" aria-labelledby="v-pills-brand-tab"
+                    tabindex="0">
+                    <!-- Brands -->
+                    <div class="container p-3">
+                        <h1 class="text-center">Brands</h1>
+
+                        <!-- Add brand button -->
+                        <button type="button" class="btn btn-primary  mb-3" data-bs-toggle="modal"
+                            data-bs-target="#brandModel"><i class="fa-solid fa-plus"></i>
+                            Add</button>
+                        <!-- Model for add brand -->
+                        <div class="modal fade modal-md" tabindex="-1" id="brandModel">
+                            <div class=" modal-dialog modal-dialog-centered modal-dialog-scrollable model-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="addBrandTitle">Add Brand</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            onclick="resetBrandForm()" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-md d-flex flex-wrap">
+                                            <form action="" id="brandForm" class="w-100">
+                                                <!-- Basic Details -->
+                                                <h4>Brand Details</h4>
+                                                <div class="p-1 d-flex flex-column gap-3">
+
+                                                    <input type="text" class="form-control" placeholder="Brand Name"
+                                                        name="brandName" id="brandName" required>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Brand short Name(Titan -> TT)"
+                                                        name="shortBrandName" id="shortBrandName" required>
+                                                    <input type="text" class="form-control" placeholder="Brand Country"
+                                                        name="brandCountry" id="brandCountry" required>
+
+                                                    <input type="text" class="form-control" placeholder="Manufacturer"
+                                                        name="manufacturer" id="manufacturer" required>
+                                                </div>
+                                                <!-- Images  -->
+                                                <h4 class="mt-3">Images</h4>
+                                                <div class="images-insert d-flex flex-wrap border rounded-2 p-3 ">
+                                                    <input type="text" name="images" id="brandImageURL"
+                                                        class="form-control" placeholder="Image Link">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                            onclick="resetBrandForm()">Close</button>
+                                        <button type="submit" form="brandForm" class="btn btn-primary">Save
+                                            Brand</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All brand display -->
+                        <div class="my-row d-flex gap-3 flex-wrap" id="brand-list"></div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                    tabindex="0">I am profile</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                    tabindex="0">I am Settings</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/admin/stock.js"></script>
+    <script src="../assets/js/admin/brand.js"></script>
+    <script src="../assets/js/admin/watch.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

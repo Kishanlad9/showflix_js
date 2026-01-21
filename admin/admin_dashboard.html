@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showflix</title>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
+
+    <!-- swiper slider CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+        integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- wow.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+</head>
+
+<body class="custom-black-bg">
+    <main>
+        <section class="">
+            <div class="d-flex flex-wrap ">
+                <div class="col-sm-2">
+                    <div class="d-flex flex-column p-3 text-white bg-dark">
+                        <a href="/"
+                            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <svg class="bi me-2" width="40" height="32">
+                                <use xlink:href="#bootstrap"></use>
+                            </svg>
+                            <span class="fs-4"><img src="../assets/images/logo/Showflix_logo.png" class="w-75"
+                                    alt=""></span>
+                        </a>
+                        <hr>
+                        <div class="d-flex justify-content-center">
+                            <div class="nav flex-column gap-3 w-100 nav-pills me-3" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <button class="btn btn-outline-danger active" id="v-pills-home-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                                    aria-controls="v-pills-home" aria-selected="true">Home</button>
+                                <button class="btn btn-outline-danger" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile" aria-selected="false">Cinema</button>
+                                <button class="btn btn-outline-danger" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-messages" type="button" role="tab"
+                                    aria-controls="v-pills-messages" aria-selected="false">Movie</button>
+                                <button class="btn btn-outline-danger" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-settings" type="button" role="tab"
+                                    aria-controls="v-pills-settings" aria-selected="false">Seat</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong>Admin</strong>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
+                                aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../user/login.html">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 px-2 bg-white">
+                    <div class="container-md">
+                        <div class="tab-content " id="v-pills-tabContent">
+                            <!-- Home -->
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab" tabindex="0">
+                                <div class="d-flex flex-column justify-content-center align-items-center py-5 ">
+                                    <h2 class="">Page under development</h2>
+                                    <img src="../assets/images/gif/web-app-developement-Synergent.webp" class="w-25"
+                                        alt="">
+                                </div>
+                            </div>
+                            <!-- Cinema -->
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                <div class="row p-2 rounded-3 bg-body-tertiary">
+                                    <div class="col-9 text-center">
+                                        <h3>Cinema</h3>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <button class="btn bg-primary text-white text-end" data-bs-toggle="modal"
+                                            data-bs-target="#cinema-model">Cinema
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal fade" id="cinema-model" tabindex="-1"
+                                        aria-labelledby="cinema-modelLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <h1 class="modal-title text-center fs-4" id="cinema-modelLabel">
+                                                            Add Cinema
+                                                        </h1>
+                                                        <div class="d-flex text-wrap justify-content-between">
+                                                            <div class="col-7">
+                                                                <div class="fields">
+                                                                    <form action=""
+                                                                        class="d-flex row-gap-2 flex-column">
+                                                                        <!-- Name -->
+                                                                        <div class="form-floating">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                id="cinema_name" placeholder="Name"
+                                                                                required="">
+                                                                            <label for="cinema_name">Cinema
+                                                                                Name</label>
+                                                                        </div>
+                                                                        <!-- Services -->
+                                                                        <div class="dropdown">
+                                                                            <button
+                                                                                class="btn btn-outline-secondary w-100 dropdown-toggle"
+                                                                                type="button" id="multiSelectDropdown"
+                                                                                data-bs-toggle="dropdown"
+                                                                                aria-expanded="false">
+                                                                                Select Services
+                                                                            </button>
+                                                                            <ul class="dropdown-menu w-100 p-1"
+                                                                                aria-labelledby="multiSelectDropdown">
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Recliner"
+                                                                                            id="checkbox1">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox1">
+                                                                                            Recliner
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Parking"
+                                                                                            id="checkbox2">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox2">
+                                                                                            Parking
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Digital Payment"
+                                                                                            id="checkbox3">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox3">
+                                                                                            Digital Payment
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Food &amp; Baverages"
+                                                                                            id="checkbox4">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox4">
+                                                                                            Food &amp; Baverages
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Ticket Cancelation"
+                                                                                            id="checkbox5">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox5">
+                                                                                            Ticket Cancelation
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Wheelchair for Disabled Person"
+                                                                                            id="checkbox6">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox6">
+                                                                                            Wheelchair for Disabled
+                                                                                            Person
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- Location -->
+                                                                        <div class="form-floating">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                id="cinema_location"
+                                                                                placeholder="Location" required="">
+                                                                            <label
+                                                                                for="cinema_location">Location</label>
+                                                                        </div>
+                                                                        <div class="form-floating">
+                                                                            <input type="tel"
+                                                                                class="form-control form-control-sm"
+                                                                                id="contact" placeholder="Contact"
+                                                                                required="">
+                                                                            <label for="contact">Contact</label>
+                                                                        </div>
+                                                                        <input type="submit" id="submit" name="submit"
+                                                                            class="btn btn-outline-secondary">
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <div class="card text-center mb-3">
+                                                                    <div class="card-body">
+                                                                        <a href="" for="file-upload">
+                                                                            <i
+                                                                                class="fa-solid fa-image fa-2xl text-primary"></i>
+                                                                            <h5 class="card-title text-black">Select
+                                                                                Cinema
+                                                                                Logo</h5>
+                                                                            <input type="file" class="form-control"
+                                                                                id="file-upload">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <table class="table table-hover table-bordered rounded">
+                                        <thead>
+                                            <tr class="table-secondary">
+                                                <th scope="col">CID</th>
+                                                <th scope="col">Cinema Name</th>
+                                                <th scope="col">Services</th>
+                                                <th scope="col">Location</th>
+                                                <th scope="col">Contact</th>
+                                                <th scope="col">logo</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>Cinepolis</td>
+                                                <td>Parking, Digital Payment, Recliner, Food &amp; Baverages</td>
+                                                <td>Imperial Mall, Hazira Rd, Guru Ram Pavan Bhumi, Adajan Gam,
+                                                    Adajan, Surat,
+                                                    Gujarat 395009, India</td>
+                                                <td>+0261-457864</td>
+                                                <td>
+                                                    <img src="../assets/images/poster/cinema_hall/cinepolis.jpg"
+                                                        class="rounded-circle logo-frame-sm" alt="">
+                                                </td>
+                                                <td>
+                                                    <!-- update -->
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#cinema-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+
+                                                    <div class="modal fade" id="cinema-update-model" tabindex="-1"
+                                                        aria-labelledby="cinema-update-modelLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container">
+                                                                        <h1 class="modal-title text-center fs-4"
+                                                                            id="cinema-update-modelLabel">
+                                                                            Update Cinema
+                                                                        </h1>
+                                                                        <div
+                                                                            class="d-flex text-wrap justify-content-between">
+                                                                            <div class="col-7">
+                                                                                <div class="fields">
+                                                                                    <form action=""
+                                                                                        class="d-flex row-gap-2 flex-column">
+                                                                                        <!-- Name -->
+                                                                                        <div class="form-floating">
+                                                                                            <input type="text"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="cinema_name"
+                                                                                                placeholder="Name"
+                                                                                                value="Cinepolis"
+                                                                                                required="">
+                                                                                            <label
+                                                                                                for="cinema_name">Cinema
+                                                                                                Name</label>
+                                                                                        </div>
+                                                                                        <!-- Services -->
+                                                                                        <div class="dropdown">
+                                                                                            <button
+                                                                                                class="btn btn-outline-secondary w-100 dropdown-toggle"
+                                                                                                type="button"
+                                                                                                id="multiSelectDropdown"
+                                                                                                data-bs-toggle="dropdown"
+                                                                                                aria-expanded="false">
+                                                                                                Select Services
+                                                                                            </button>
+                                                                                            <ul class="dropdown-menu w-100 p-1"
+                                                                                                aria-labelledby="multiSelectDropdown">
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check"
+                                                                                                            type="checkbox"
+                                                                                                            value="Recliner"
+                                                                                                            id="checkbox1"
+                                                                                                            checked="">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox1">
+                                                                                                            Recliner
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Parking"
+                                                                                                            id="checkbox2"
+                                                                                                            checked="">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox2">
+                                                                                                            Parking
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Digital Payment"
+                                                                                                            id="checkbox3"
+                                                                                                            checked="">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox3">
+                                                                                                            Digital
+                                                                                                            Payment
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Food &amp; Baverages"
+                                                                                                            id="checkbox4"
+                                                                                                            checked="">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox4">
+                                                                                                            Food &amp;
+                                                                                                            Baverages
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Ticket Cancelation"
+                                                                                                            id="checkbox5"
+                                                                                                            checked="">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox5">
+                                                                                                            Ticket
+                                                                                                            Cancelation
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Wheelchair for Disabled Person"
+                                                                                                            id="checkbox6">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox6">
+                                                                                                            Wheelchair
+                                                                                                            for
+                                                                                                            Disabled
+                                                                                                            Person
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <!-- Location -->
+                                                                                        <div class="form-floating">
+                                                                                            <input type="text"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="cinema_location"
+                                                                                                placeholder="Location"
+                                                                                                value="Imperial Mall, Hazira Rd, Guru Ram Pavan Bhumi, Adajan Gam,
+                                                        Adajan, Surat,
+                                                        Gujarat 395009, India" required="">
+                                                                                            <label
+                                                                                                for="cinema_location">Location</label>
+                                                                                        </div>
+                                                                                        <div class="form-floating">
+                                                                                            <input type="tel"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="contact"
+                                                                                                placeholder="Contact"
+                                                                                                value="+0261-457864"
+                                                                                                required="">
+                                                                                            <label
+                                                                                                for="contact">Contact</label>
+                                                                                        </div>
+                                                                                        <input type="submit" id="submit"
+                                                                                            name="submit"
+                                                                                            class="btn btn-outline-secondary">
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <div class="card text-center mb-3">
+                                                                                    <div class="card-body">
+                                                                                        <a href="" for="file-upload">
+                                                                                            <i
+                                                                                                class="fa-solid fa-image fa-2xl text-primary"></i>
+                                                                                            <h5
+                                                                                                class="card-title text-black">
+                                                                                                Select
+                                                                                                Cinema
+                                                                                                Logo</h5>
+                                                                                            <input type="file"
+                                                                                                class="form-control"
+                                                                                                id="file-upload">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn">Delete</button>
+                                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                        <div id="liveToast" class="toast" role="alert"
+                                                            aria-live="assertive" aria-atomic="true">
+                                                            <div class="toast-header">
+                                                                <i class="fa-solid fa-circle text-success"></i>
+                                                                <strong class="me-auto">Notification</strong>
+                                                                <small>2 Sec ago</small>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="toast" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="toast-body">
+                                                                Cinema deleted successfully
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td>INOX</td>
+                                                <td>Parking, Digital Payment, Recliner</td>
+                                                <td>INOX Raj Imperial, Varachha Road, Surat,
+                                                    Gujarat 394109, India</td>
+                                                <td>+0261-843587</td>
+                                                <td>
+                                                    <img src="../assets/images/poster/cinema_hall/inox.png"
+                                                        class="rounded-circle logo-frame-sm" alt="">
+                                                </td>
+                                                <td>
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#cinema-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn2">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- Movie -->
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                <div class="row p-2 rounded-3 bg-body-tertiary">
+                                    <div class="col-9 text-center">
+                                        <h3>Movie</h3>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <button class="btn bg-primary text-white text-end" data-bs-toggle="modal"
+                                            data-bs-target="#movie-model">Movie
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal fade" id="movie-model" tabindex="-1"
+                                        aria-labelledby="movie-modelLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <h1 class="modal-title text-center fs-4" id="movie-modelLabel">
+                                                            Add Movie
+                                                        </h1>
+                                                        <div class="d-flex text-wrap justify-content-between">
+                                                            <div class="col-7">
+                                                                <div class="fields">
+                                                                    <form action=""
+                                                                        class="d-flex row-gap-2 flex-column">
+                                                                        <!-- Name -->
+                                                                        <div class="form-floating">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                id="movie_name" placeholder="Name"
+                                                                                required="">
+                                                                            <label for="movie_name">Movie
+                                                                                Name</label>
+                                                                        </div>
+                                                                        <!-- Services -->
+                                                                        <div class="dropdown">
+                                                                            <button
+                                                                                class="btn btn-outline-secondary w-100 dropdown-toggle"
+                                                                                type="button" id="multiSelectDropdown"
+                                                                                data-bs-toggle="dropdown"
+                                                                                aria-expanded="false">
+                                                                                Select formats
+                                                                            </button>
+                                                                            <ul class="dropdown-menu w-100 p-1"
+                                                                                aria-labelledby="multiSelectDropdown">
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Recliner"
+                                                                                            id="checkbox1">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox1">
+                                                                                            2-D
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Parking"
+                                                                                            id="checkbox2">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox2">
+                                                                                            3D
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Digital Payment"
+                                                                                            id="checkbox3">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox3">
+                                                                                            4DX
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Food &amp; Baverages"
+                                                                                            id="checkbox4">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox4">
+                                                                                            IMAX
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Ticket Cancelation"
+                                                                                            id="checkbox5">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox5">
+                                                                                            ATOMS
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="px-2">
+                                                                                    <div
+                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                        <input class="form-check "
+                                                                                            type="checkbox"
+                                                                                            value="Wheelchair for Disabled Person"
+                                                                                            id="checkbox6">
+                                                                                        <label class="form-check-label"
+                                                                                            for="checkbox6">
+                                                                                            INOX
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- More details -->
+                                                                        <div class="form-floating">
+                                                                            <textarea name="details" id="details"
+                                                                                class="form-control"
+                                                                                placeholder="Details"></textarea>
+
+                                                                        </div>
+                                                                        <div class="form-floating">
+                                                                            <input type="time"
+                                                                                class="form-control form-control-sm"
+                                                                                id="contact" placeholder="Contact"
+                                                                                required="">
+                                                                            <label for="contact">Show Time</label>
+                                                                        </div>
+                                                                        <input type="submit" id="submit" name="submit"
+                                                                            class="btn btn-outline-secondary">
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <div class="card text-center mb-3">
+                                                                    <div class="card-body">
+                                                                        <a href="" for="file-upload">
+                                                                            <i
+                                                                                class="fa-solid fa-image fa-2xl text-primary"></i>
+                                                                            <h5 class="card-title text-black">Select
+                                                                                Movie
+                                                                                Poster</h5>
+                                                                            <input type="file" class="form-control"
+                                                                                id="file-upload">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <table class="table table-hover table-bordered rounded">
+                                        <thead>
+                                            <tr class="table-secondary">
+                                                <th scope="col">MID</th>
+                                                <th scope="col">Movie Name</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">In Cinema</th>
+                                                <th scope="col">Shows</th>
+                                                <th scope="col">logo</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>Kantara</td>
+                                                <td>UA16+ | Hindi | Kannada</td>
+                                                <td>Cinepolis</td>
+                                                <td>8:30 AM</td>
+                                                <td>
+                                                    <img src="../assets/images/poster/kantara.jpg" class="frame-2x2"
+                                                        alt="">
+                                                </td>
+                                                <td>
+                                                    <!-- update -->
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#movie-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+
+                                                    <div class="modal fade" id="movie-update-model" tabindex="-1"
+                                                        aria-labelledby="movie-update-modelLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container">
+                                                                        <h1 class="modal-title text-center fs-4"
+                                                                            id="movie-update-modelLabel">
+                                                                            Update movie
+                                                                        </h1>
+                                                                        <div
+                                                                            class="d-flex text-wrap justify-content-between">
+                                                                            <div class="col-7">
+                                                                                <div class="fields">
+                                                                                    <form action=""
+                                                                                        class="d-flex row-gap-2 flex-column">
+                                                                                        <!-- Name -->
+                                                                                        <div class="form-floating">
+                                                                                            <input type="text"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="movie_name"
+                                                                                                placeholder="Name"
+                                                                                                value="Kantara: chapter-1"
+                                                                                                required="">
+                                                                                            <label
+                                                                                                for="movie_name">Movie
+                                                                                                Name</label>
+                                                                                        </div>
+                                                                                        <!-- Services -->
+                                                                                        <div class="dropdown">
+                                                                                            <button
+                                                                                                class="btn btn-outline-secondary w-100 dropdown-toggle"
+                                                                                                type="button"
+                                                                                                id="multiSelectDropdown"
+                                                                                                data-bs-toggle="dropdown"
+                                                                                                aria-expanded="false">
+                                                                                                Select formats
+                                                                                            </button>
+                                                                                            <ul class="dropdown-menu w-100 p-1"
+                                                                                                aria-labelledby="multiSelectDropdown">
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Recliner"
+                                                                                                            id="checkbox1"
+                                                                                                            checked>
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox1">
+                                                                                                            2-D
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Parking"
+                                                                                                            id="checkbox2"
+                                                                                                            checked>
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox2">
+                                                                                                            3D
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class="d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Digital Payment"
+                                                                                                            id="checkbox3"
+                                                                                                            checked>
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox3">
+                                                                                                            4DX
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Food &amp; Baverages"
+                                                                                                            id="checkbox4">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox4">
+                                                                                                            IMAX
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Ticket Cancelation"
+                                                                                                            id="checkbox5">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox5">
+                                                                                                            ATOMS
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li class="px-2">
+                                                                                                    <div
+                                                                                                        class=" d-flex gap-2 form-check dropdown-item">
+                                                                                                        <input
+                                                                                                            class="form-check "
+                                                                                                            type="checkbox"
+                                                                                                            value="Wheelchair for Disabled Person"
+                                                                                                            id="checkbox6">
+                                                                                                        <label
+                                                                                                            class="form-check-label"
+                                                                                                            for="checkbox6">
+                                                                                                            INOX
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <!-- More details -->
+                                                                                        <div class="form-floating">
+                                                                                            <textarea name="details"
+                                                                                                id="details"
+                                                                                                class="form-control"
+                                                                                                placeholder="Details"
+                                                                                                value="">Exploring the origins of Kaadubettu Shiva during the Kadamba dynasty era, it delves into the untamed wilderness and forgotten lore surrounding his past.</textarea>
+
+                                                                                        </div>
+                                                                                        <div class="form-floating">
+                                                                                            <input type="time"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="time"
+                                                                                                placeholder="Time"
+                                                                                                required=""
+                                                                                                value="18:10">
+                                                                                            <label for="contact">Show
+                                                                                                Time</label>
+                                                                                        </div>
+                                                                                        <input type="submit" id="submit"
+                                                                                            name="submit"
+                                                                                            class="btn btn-outline-secondary">
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-3">
+                                                                                <div class="card text-center mb-3">
+                                                                                    <div class="card-body">
+                                                                                        <a href="" for="file-upload">
+                                                                                            <i
+                                                                                                class="fa-solid fa-image fa-2xl text-primary"></i>
+                                                                                            <h5
+                                                                                                class="card-title text-black">
+                                                                                                Select
+                                                                                                Movie
+                                                                                                Poster</h5>
+                                                                                            <input type="file"
+                                                                                                class="form-control"
+                                                                                                id="file-upload">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn">Delete</button>
+                                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                        <div id="liveToast" class="toast" role="alert"
+                                                            aria-live="assertive" aria-atomic="true">
+                                                            <div class="toast-header">
+                                                                <i class="fa-solid fa-circle text-success"></i>
+                                                                <strong class="me-auto">Notification</strong>
+                                                                <small>2 Sec ago</small>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="toast" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="toast-body">
+                                                                Cinema deleted successfully
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td>Jatadhara</td>
+                                                <td>UA13+ | Hindi | Horrer</td>
+                                                <td>INOX | Rajhans</td>
+                                                <td>11:00 AM</td>
+                                                <td>
+                                                    <img src="../assets/images/poster/Jatadhara.jpg" class="frame-2x2"
+                                                        alt="">
+                                                </td>
+                                                <td>
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#movie-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn2">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- Seat -->
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab" tabindex="0">
+                                <div class="row p-2 rounded-3 bg-body-tertiary">
+                                    <div class="col-9 text-center">
+                                        <h3>Seat</h3>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <button class="btn bg-primary text-white text-end" data-bs-toggle="modal"
+                                            data-bs-target="#seat-model">Seat
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal fade" id="seat-model" tabindex="-1"
+                                        aria-labelledby="seat-modelLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <h1 class="modal-title text-center fs-4" id="seat-modelLabel">
+                                                            Add seat
+                                                        </h1>
+                                                        <div class="d-flex text-wrap justify-content-between">
+                                                            <div class="col-12">
+                                                                <div class="fields">
+                                                                    <form action=""
+                                                                        class="d-flex row-gap-2 flex-column">
+                                                                        <!-- Name -->
+                                                                        <div class="form-floating">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                id="name" placeholder="Movie"
+                                                                                required="">
+                                                                            <label for="name">Movie
+                                                                                Name</label>
+                                                                        </div>
+                                                                        <div class="form-floating">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-sm"
+                                                                                id="cinema" placeholder="Cinema"
+                                                                                required="">
+                                                                            <label for="cinema">Cinema
+                                                                                Name</label>
+                                                                        </div>
+                                                                        <div class="form-floating">
+                                                                            <input type="time"
+                                                                                class="form-control form-control-sm"
+                                                                                id="contact" placeholder="Contact"
+                                                                                required="">
+                                                                            <label for="contact">Show Time</label>
+                                                                        </div>
+                                                                        <div class="form-floating">
+                                                                            <input type="number"
+                                                                                class="form-control form-control-sm"
+                                                                                id="count" placeholder="seat"
+                                                                                required="" min="20" max="200">
+                                                                            <label for="count">Total
+                                                                                Seat</label>
+                                                                        </div>
+                                                                        <input type="submit" id="submit" name="submit"
+                                                                            class="btn btn-outline-secondary">
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <table class="table table-hover table-bordered rounded">
+                                        <thead>
+                                            <tr class="table-secondary">
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Movie Name</th>
+                                                <th scope="col">Cinema Name</th>
+                                                <th scope="col">Show Time</th>
+                                                <th scope="col">Seat</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>Kantara</td>
+                                                <td>Cinepolis</td>
+                                                <td>18:30</td>
+                                                <td>150</td>
+                                                <td>
+                                                    <!-- update -->
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#seat-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+
+                                                    <div class="modal fade" id="seat-update-model" tabindex="-1"
+                                                        aria-labelledby="seat-update-modelLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container">
+                                                                        <h1 class="modal-title text-center fs-4"
+                                                                            id="seat-update-modelLabel">
+                                                                            Update seat
+                                                                        </h1>
+                                                                        <div
+                                                                            class="d-flex text-wrap justify-content-between">
+                                                                            <div class="col-12">
+                                                                                <div class="fields">
+                                                                                    <form action=""
+                                                                                        class="d-flex row-gap-2 flex-column">
+                                                                                        <!-- Name -->
+                                                                                        <div class="form-floating">
+                                                                                            <input type="text"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="name"
+                                                                                                value="Kantara: Chapter 1"
+                                                                                                placeholder="Movie"
+                                                                                                required="">
+                                                                                            <label for="name">Movie
+                                                                                                Name</label>
+                                                                                        </div>
+                                                                                        <div class="form-floating">
+                                                                                            <input type="text"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="cinema"
+                                                                                                placeholder="Cinema"
+                                                                                                required=""
+                                                                                                value="Cinepolis">
+                                                                                            <label for="cinema">Cinema
+                                                                                                Name</label>
+                                                                                        </div>
+                                                                                        <div class="form-floating">
+                                                                                            <input type="time"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="contact"
+                                                                                                placeholder="Contact"
+                                                                                                required=""
+                                                                                                value="18:30">
+                                                                                            <label for="contact">Show
+                                                                                                Time</label>
+                                                                                        </div>
+                                                                                        <div class="form-floating">
+                                                                                            <input type="number"
+                                                                                                class="form-control form-control-sm"
+                                                                                                id="count"
+                                                                                                placeholder="seat"
+                                                                                                required="" min="20"
+                                                                                                max="200" value="150">
+                                                                                            <label for="count">Total
+                                                                                                Seat</label>
+                                                                                        </div>
+                                                                                        <input type="submit" id="submit"
+                                                                                            name="submit"
+                                                                                            class="btn btn-outline-secondary">
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn">Delete</button>
+                                                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                                        <div id="liveToast" class="toast" role="alert"
+                                                            aria-live="assertive" aria-atomic="true">
+                                                            <div class="toast-header">
+                                                                <i class="fa-solid fa-circle text-success"></i>
+                                                                <strong class="me-auto">Notification</strong>
+                                                                <small>2 Sec ago</small>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="toast" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="toast-body">
+                                                                Cinema deleted successfully
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td>Jatadhara</td>
+                                                <td>INOX | Rajhans</td>
+                                                <td>11:00 AM</td>
+                                                <td>
+                                                    120
+                                                </td>
+                                                <td>
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#seat-update-model"
+                                                        class="btn text-white bg-primary m-2">Update</button>
+                                                    <button type="button" class="btn text-white bg-primary m-2"
+                                                        id="liveToastBtn2">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- bootstrap js -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper slider js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "cinemaId": 1,
+      "screenId": 1,
+      "movieId": 1,
+      "showDate": "2026-01-15",
+      "showStartTime": "18:30",
+      "showEndTime": "20:46",
+      "language": "English",
+      "format": "IMAX",
+      "pricing": {
+        "regular": 250,
+        "premium": 350,
+        "recliner": 500
+      },
+      "seatStatus": {
+        "totalSeats": 120,
+        "bookedSeats": 45,
+        "availableSeats": 75
+      },
+      "status": "scheduled",
+      "createdAt": "2026-01-05T06:30:00.000Z",
+      "updatedAt": "2026-01-05T06:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "cinemaId": 1,
+      "screenId": 2,
+      "movieId": 2,
+      "showDate": "2026-01-18",
+      "showStartTime": "21:00",
+      "showEndTime": "23:30",
+      "language": "Hindi",
+      "format": "2D",
+      "pricing": {
+        "regular": 180,
+        "premium": 280,
+        "recliner": 420
+      },
+      "seatStatus": {
+        "totalSeats": 100,
+        "bookedSeats": 100,
+        "availableSeats": 0
+      },
+      "status": "running",
+      "createdAt": "2026-01-05T07:00:00.000Z",
+      "updatedAt": "2026-01-10T15:35:00.000Z"
+    },
+    {
+      "id": 3,
+      "cinemaId": 2,
+      "screenId": 3,
+      "movieId": 3,
+      "showDate": "2026-01-13",
+      "showStartTime": "14:00",
+      "showEndTime": "16:45",
+      "language": "Kannada",
+      "format": "3D",
+      "pricing": {
+        "regular": 200,
+        "premium": 320,
+        "recliner": 480
+      },
+      "seatStatus": {
+        "totalSeats": 150,
+        "bookedSeats": 30,
+        "availableSeats": 120
+      },
+      "status": "scheduled",
+      "createdAt": "2026-01-06T04:15:00.000Z",
+      "updatedAt": "2026-01-06T04:15:00.000Z"
+    }
+  ]
+}

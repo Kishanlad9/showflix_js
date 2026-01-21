@@ -1,0 +1,18 @@
+@media (max-width: 775.5px) {
+  .poster-details {
+    display: none;
+  }
+}
+
+.element-visible {
+  content-visibility: hidden;
+}
+
+.element-visible:hover {
+  content-visibility: visible;
+  background: linear-gradient(
+    221.52deg,
+    rgba(46, 45, 45, 0.5) 208.03%,
+    rgba(229, 0, 0, 0) 100.32%
+  );
+}

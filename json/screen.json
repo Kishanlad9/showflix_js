@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "cinemaId": 1,
+      "name": "Ruby",
+      "totalSeats": 80,
+      "seatLayout": {
+        "rows": 10,
+        "columns": 8
+      },
+      "isActive": true,
+      "createdAt": "2023-10-01T10:00:00Z",
+      "updatedAt": "2023-10-15T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "cinemaId": 1,
+      "name": "Topaz",
+      "totalSeats": 120,
+      "seatLayout": {
+        "rows": 10,
+        "columns": 12
+      },
+      "isActive": true,
+      "createdAt": "2023-11-01T10:00:00Z",
+      "updatedAt": "2023-11-15T12:00:00Z"
+    },
+    {
+      "id": 3,
+      "cinemaId": 2,
+      "name": "Flamingo",
+      "totalSeats": 40,
+      "seatLayout": {
+        "rows": 8,
+        "columns": 5
+      },
+      "isActive": true,
+      "createdAt": "2023-12-01T10:00:00Z",
+      "updatedAt": "2023-12-15T12:00:00Z"
+    }
+  ]
+}

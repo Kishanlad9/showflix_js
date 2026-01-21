@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Image Upload</title>
+    <style>
+        .preview {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="file" id="imageInput" accept="image/*" />
+    <input type="button" name="submitBtn" id="submitBtn" value="Submit">
+    <div class="preview" id="preview">
+        No Image Selected
+    </div>
+    <table>
+        <tbody id="imageList">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        const imageInput = document.getElementById("imageInput");
+        const preview = document.getElementById("preview");
+        let imageList = document.getElementById("imageList");
+
+        function getImagesFromLocal() {
+            return JSON.parse(localStorage.getItem("uploadedImageName")) || [];
+        }
+        imageInput.addEventListener("change", (e) => {
+            // here e is the event object and e.target means imageInput Element (which is our file input). and it's result is the file(s) selected by user.
+            console.log(e);
+            const file = imageInput;
+            if (!file.files || !file.files[0]) {
+                preview.innerHTML = "No Image Selected";
+                return;
+            } else {
+
+                // FileReader is a browser API that allows to read file content. It converts file into JS readable format
+                // FileReader works asynchronously
+                const reader = new FileReader();
+                // here e.target means the reader object (reader.onload) and result is the data URL of the read file
+                reader.onload = function (e) {
+                    console.log(e);
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Image Preview" />`;
+                };
+                // with this line we can read the file as a data URL and to read text file we can use readAsText method. 
+                // readAsDataURL is used to read images.
+                reader.readAsDataURL(file.files[0]);
+
+            }
+        })
+
+        document.getElementById('submitBtn').addEventListener("click", () => {
+            let imageData = getImagesFromLocal();
+            const file = imageInput.files[0];
+            console.log(file);
+            if (!file) return;
+            // ✅ Validation
+            if (!file.type.startsWith("image/")) {
+                alert("Only image files allowed");
+                imageInput.value = "";
+                return;
+            }
+            if (file.size > 2 * 1024 * 1024) {
+                alert("Image must be under 2MB");
+                imageInput.value = "";
+                return;
+            }
+
+            imageData.push(file.name);
+            localStorage.setItem("uploadedImageName", JSON.stringify(imageData));
+            displayImage()
+        });
+
+        function displayImage() {
+            let raw = getImagesFromLocal();
+            imageList.innerHTML = "";
+            raw.forEach(element => {
+                // Make a global variable for image path. Like 
+                // export const posterImagePath = "../assets/images/poster/";
+                // export const cinemaImagePath = "../assets/images/cinema/";
+                // Then use that variable here.
+                // For that we have to make our script type="module". in <script> tag
+                let tr = `
+                <tr>
+                    <td><img src="../assets/images/poster/${element}" width="150px" height="200px"></td>    
+                </tr>
+                `;
+                imageList.innerHTML += tr;
+            });
+        }
+        displayImage()
+    </script>
+</body>
+
+</html>

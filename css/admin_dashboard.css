@@ -1,0 +1,7 @@
+body {
+  height: 100vh;
+}
+
+.full-height {
+  min-height: 100%;
+}

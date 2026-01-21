@@ -1,0 +1,121 @@
+user/admin: {
+    id: "1",
+    name: "Kishan"
+    contact: "123456789
+    email: "ladkishan99@gmail.com"
+    password: "asd123"
+    role: "user"
+    isActive: true
+    createdAt: "ISO time"
+}
+
+cinema: {
+    cid: "1"
+    name: "INOX"
+    address: "Surat"
+    services: ["Recliner", "Parking", "Digital Payment", "Food and bavrages"],
+    contact: 12345689,
+    logo: "logo link",
+    isActive: true
+    createdAt: "ISO Time",
+    updatedAt: "ISO Time"
+}
+
+movie: {
+    mid: 1
+    name: "Intersteller",
+    description: "asdqwras",
+    certifiedFor: "16+" (select list),  
+    movieLength: "2h 16m",
+    releaseDate: "27 dec"
+    languages: "[hindi, eng]"
+    geners: ["Adventure", "sci-fi"]
+    ImdbRating: "8.1"
+    cast&Crew: [{
+        name: "John"
+        castImage: "link"
+    },
+    {
+        name: "Emily"
+        castImage: "link"
+    }],
+    posterImage: "poster Link'
+    trailerLink: "Youtube link" 
+    isActive: true,
+    createdAt: "ISO",
+    updatedAt: "ISO" 
+},
+
+screen: {
+  screenId: "SCR01",
+  cinemaId: "1",        // Reference to cinema.cid
+  name: "Screen 1(Ruby)",
+  totalSeats: 120,
+  seatLayout: {
+    rows: 10,
+    columns: 12
+  },
+  isActive: true,
+  createdAt: "ISO Time",
+  updatedAt: "ISO Time"
+}
+
+show: {
+  showId: "SHOW1001",
+  cinemaId: "1",        // INOX, Surat
+  screenId: "SCR01",    // Screen 1
+  movieId: 1,           // Interstellar
+  showDate: "2026-01-10",        // YYYY-MM-DD
+  showStartTime: "18:30",        // 24-hr format
+  showEndTime: "20:46",
+  language: "English",
+  format: "2D",                  // 2D | 3D | IMAX | 4DX
+  pricing: {
+    regular: 200,
+    premium: 300,
+    recliner: 450
+  },
+  seatStatus: {
+    totalSeats: 120,
+    bookedSeats: 45,
+    availableSeats: 75
+  },
+  status: "scheduled",           // scheduled | running | cancelled|completed
+  createdAt: "ISO Time",
+  updatedAt: "ISO Time"
+}
+
+seat: {
+  seatId: "A10",
+  showId: "SHOW1001",
+  type: "recliner",       // regular | premium | recliner
+  price: 450,
+  status: "available"     // available | booked | blocked
+}
+
+booking: {
+  bookingId: "BK10001",
+  userId: "USER01",
+  showId: "SHOW1001",
+  seats: [
+    { seatId: "A10", price: 450 },
+    { seatId: "A11", price: 450 }
+  ],
+  totalAmount: 900,
+  bookingStatus: "confirmed",
+  // pending | confirmed | cancelled | expired
+  createdAt: "ISO Time",
+  updatedAt: "ISO Time"
+}
+
+payment: {
+  paymentId: "PAY90001",
+  bookingId: "BK10001",
+  userId: "USER01",
+  amount: 900,
+  transactionId: "rzp_txn_893746",
+  paymentStatus: "success",
+  // initiated | success | failed | refunded
+  paidAt: "ISO Time",
+  createdAt: "ISO Time"
+}

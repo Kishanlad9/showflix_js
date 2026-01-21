@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "John",
+      "contact": "7584958645",
+      "email": "johnwick1@gmail.com",
+      "password": "john1",
+      "role": "user",
+      "isActive": true,
+      "createdAt": "2023-11-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Tony",
+      "contact": "5462857954",
+      "email": "tonystark2@gmail.com",
+      "password": "tony2",
+      "role": "user",
+      "isActive": true,
+      "createdAt": "2023-11-01T10:00:00Z"
+    }
+  ],
+  "adminData": [
+    {
+      "id": 1,
+      "name": "Kishan",
+      "contact": "123456789",
+      "email": "ladkishan12345@gmail.com",
+      "password": "asd123",
+      "role": "admin",
+      "isActive": true,
+      "createdAt": "2023-10-01T10:00:00Z"
+    }
+  ]
+}

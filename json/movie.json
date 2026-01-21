@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Predator: Badlands",
+      "description": "A new chapter in the Predator franchise set in harsh and unforgiving badlands where survival is the only rule.",
+      "certifiedFor": "A(18+)",
+      "movieLength": "02:05",
+      "releaseDate": "2026-01-14",
+      "languages": ["English"],
+      "geners": ["Action", "Sci-Fi", "Thriller"],
+      "posterImage": "predator_badlands.jpg",
+      "trailerLink": "https://www.youtube.com/watch?v=43R9l7EkJwE",
+      "isActive": true,
+      "createdAt": "2026-01-08T08:00:00.000Z",
+      "updatedAt": "2026-01-08T08:00:00.000Z"
+    },
+
+    {
+      "id": 2,
+      "name": "Kantara",
+      "description": "A gripping tale rooted in folklore, tradition, and divine justice set in rural Karnataka.",
+      "certifiedFor": "UA(16+)",
+      "movieLength": "02:28",
+      "releaseDate": "2026-01-10",
+      "languages": ["Kannada", "Hindi", "Tamil", "Telugu", "Malayalam"],
+      "geners": ["Action", "Drama", "Thriller"],
+      "posterImage": "kantara.jpg",
+      "trailerLink": "https://www.youtube.com/watch?v=M2OnifMgvps",
+      "isActive": true,
+      "createdAt": "2026-01-08T08:05:00.000Z",
+      "updatedAt": "2026-01-08T08:05:00.000Z"
+    },
+
+    {
+      "id": 3,
+      "name": "Dhurandhar",
+      "description": "An upcoming high-octane action thriller focusing on espionage, patriotism, and power.",
+      "certifiedFor": "UA(16+)",
+      "movieLength": "03:40",
+      "releaseDate": "2026-01-12",
+      "languages": ["Hindi"],
+      "geners": ["Action", "Thriller"],
+      "posterImage": "Dhurandhar.jpg",
+      "trailerLink": "https://www.youtube.com/watch?v=rZ_e-s6VvR4",
+      "isActive": true,
+      "createdAt": "2026-01-08T08:10:00.000Z",
+      "updatedAt": "2026-01-08T08:10:00.000Z"
+    },
+
+    {
+      "id": 4,
+      "name": "Avatar: Fire and Ash",
+      "description": "The third installment of Avatar explores darker themes as new clans and volcanic regions of Pandora are revealed.",
+      "certifiedFor": "UA(13+)",
+      "movieLength": "03:00",
+      "releaseDate": "2026-01-05",
+      "languages": ["English", "Hindi"],
+      "geners": ["Adventure", "Sci-Fi", "Fantasy"],
+      "posterImage": "Avatar-Fire-and-Ash_.jpg",
+      "trailerLink": "https://www.youtube.com/watch?v=UuGf9fYHOpo",
+      "isActive": true,
+      "createdAt": "2026-01-08T08:15:00.000Z",
+      "updatedAt": "2026-01-08T08:15:00.000Z"
+    }
+  ]
+}
