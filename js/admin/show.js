@@ -76,13 +76,18 @@ function updateShow(showId) {
   let findedScreen = screens.data.filter(
     (screen) => screen.cinemaId == findedShow.cinemaId,
   );
-  let findedMovieLang = movies.data.filter(
+  let findedMovieLang = movies.data.find(
     (movie) => movie.id == findedShow.movieId,
   );
-
+  selectShowLanguage.innerHTML = "";
+  let option = `<option disabled>Select Language</option>`;
+  findedMovieLang.languages.forEach((lang) => {
+    option += `
+    <option value="${lang}">${lang}</option>
+    `;
+  });
+  selectShowLanguage.innerHTML += option;
   generateDropdownByValue(findedScreen, selectScreenForShow, "Screen");
-
-  console.log(findedShow);
   selectCinemaForShow.value = findedShow.cinemaId;
   selectMovieForShow.value = findedShow.movieId;
   selectScreenForShow.value = findedShow.screenId;
@@ -91,6 +96,10 @@ function updateShow(showId) {
   document.getElementById("showDate").value = findedShow.showDate;
   document.getElementById("showStartTime").value = findedShow.showStartTime;
   document.getElementById("showEndTime").value = findedShow.showEndTime;
+  document.getElementById("regularPrice").value = findedShow.pricing.regular;
+  document.getElementById("premiumPrice").value = findedShow.pricing.premium;
+  document.getElementById("reclinerPrice").value = findedShow.pricing.recliner;
+  editShowId = showId;
 }
 
 // Display Shows
@@ -127,38 +136,72 @@ function displayShows() {
   });
 }
 
-showForm.addEventListener("submit", () => {
+showForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   let findSeat = screens.data.find((screen) => {
     if (screen.id == selectScreenForShow.value) return screen;
   });
   const formData = new FormData(showForm);
-  const newShow = {
-    id: Number(generateId("shows")),
-    cinemaId: Number(selectCinemaForShow.value),
-    screenId: Number(selectScreenForShow.value),
-    movieId: Number(selectMovieForShow.value),
-    showDate: formData.get("showDate"),
-    showStartTime: formData.get("showStartTime"),
-    showEndTime: formData.get("showEndTime"),
-    language: selectShowLanguage.value,
-    format: selectShowFormat.value,
-    pricing: {
-      regular: Number(formData.get("regularPrice")),
-      premium: Number(formData.get("premiumPrice")),
-      recliner: Number(formData.get("reclinerPrice")),
-    },
-    seatStatus: {
-      totalSeats: Number(findSeat.totalSeats),
-      bookedSeats: 0,
-      availableSeats: 0,
-    },
-    status: "scheduled",
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  };
-  shows.data.push(newShow);
+  if (editShowId != null) {
+    console.log(editShowId);
+    let showIndex = shows.data.findIndex((show) => {
+      show.id == editShowId;
+    });
+    console.log(editShowId);
+    shows.data[showIndex] = {
+      ...shows.data[showIndex],
+      cinemaId: Number(selectCinemaForShow.value),
+      screenId: Number(selectScreenForShow.value),
+      movieId: Number(selectMovieForShow.value),
+      showDate: formData.get("showDate"),
+      showStartTime: formData.get("showStartTime"),
+      showEndTime: formData.get("showEndTime"),
+      language: selectShowLanguage.value,
+      format: selectShowFormat.value,
+      pricing: {
+        regular: Number(formData.get("regularPrice")),
+        premium: Number(formData.get("premiumPrice")),
+        recliner: Number(formData.get("reclinerPrice")),
+      },
+      seatStatus: {
+        totalSeats: Number(findSeat.totalSeats),
+        bookedSeats: 0,
+        availableSeats: 0,
+      },
+      status: "scheduled",
+      updatedAt: new Date().toISOString(),
+    };
+    editShowId = null;
+  } else {
+    const newShow = {
+      id: Number(generateId("shows")),
+      cinemaId: Number(selectCinemaForShow.value),
+      screenId: Number(selectScreenForShow.value),
+      movieId: Number(selectMovieForShow.value),
+      showDate: formData.get("showDate"),
+      showStartTime: formData.get("showStartTime"),
+      showEndTime: formData.get("showEndTime"),
+      language: selectShowLanguage.value,
+      format: selectShowFormat.value,
+      pricing: {
+        regular: Number(formData.get("regularPrice")),
+        premium: Number(formData.get("premiumPrice")),
+        recliner: Number(formData.get("reclinerPrice")),
+      },
+      seatStatus: {
+        totalSeats: Number(findSeat.totalSeats),
+        bookedSeats: 0,
+        availableSeats: 0,
+      },
+      status: "scheduled",
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    shows.data.push(newShow);
+  }
   saveToLocalStorage("shows", shows);
   showForm.reset();
+  console.log(shows);
   displayShows();
 });
 displayShows();
